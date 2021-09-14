@@ -6,7 +6,12 @@ class User < ApplicationRecord
 
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
 
+
+  # avatar
+  has_one_attached :avatar
   validate :validate_username
+
+  #friendship
 
   def validate_username
     if User.where(email: username).exists?

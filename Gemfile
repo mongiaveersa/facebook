@@ -23,9 +23,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
-# gem 'has_friendship'
 gem 'devise-bootstrap-views', '~> 1.0'
-
+gem 'gravatar_image_tag'
+gem 'image_processing'
+gem 'rmagick'
 
 
 # Use Active Storage variant
