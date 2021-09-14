@@ -40,15 +40,6 @@ ActiveRecord::Schema.define(version: 2021_09_14_141040) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "friendships", force: :cascade do |t|
-    t.string "friendable_type"
-    t.integer "friendable_id"
-    t.integer "friend_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer "blocker_id"
-    t.string "status"
-  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

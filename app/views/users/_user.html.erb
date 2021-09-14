@@ -1,0 +1,9 @@
+<li class="list_item">
+    <div class="image"> <%= gravatar_for user %> </div>
+    <%= link_to user.username, user %>
+    <%
+=begin%>
+ <%= render 'friend_buttons', user: user %> 
+<%
+=end%>
+</li>
