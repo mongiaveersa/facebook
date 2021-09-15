@@ -1,0 +1,14 @@
+<main class="user_index">
+<h1>All Pending requests</h1>
+
+<ol class="user_list">
+<% @pending.each do |user| %>
+  <li class="list_item">
+    <%= image_tag gravatar_image_url(user), :class => 'gravatar' %>
+    <%= link_to user.username, user %>
+    <%= render 'friend_buttons', user: user %>
+</li>
+<% end %>
+</ol>
+
+</main>
