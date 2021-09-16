@@ -4,7 +4,11 @@
 <ol class="user_list">
 <% @pending.each do |user| %>
   <li class="list_item">
-    <%= image_tag gravatar_image_url(user), :class => 'gravatar' %>
+    <%
+=begin%>
+ <%= image_tag gravatar_image_url(user), :class => 'gravatar' %> 
+<%
+=end%>
     <%= link_to user.username, user %>
     <%= render 'friend_buttons', user: user %>
 </li>

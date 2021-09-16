@@ -27,6 +27,7 @@ gem 'devise-bootstrap-views', '~> 1.0'
 gem 'gravatar_image_tag'
 gem 'image_processing'
 gem 'rmagick'
+gem 'gravtastic'
 
 
 # Use Active Storage variant

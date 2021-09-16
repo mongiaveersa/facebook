@@ -1,4 +1,8 @@
 <li class="list_item">
-  <%= link_to(gravatar_for(user, 80), user_path(user)) %>
+  <%
+=begin%>
+ <%= link_to(gravatar_for(user, 80), user_path(user)) %> 
+<%
+=end%>
   <%= link_to user.username, user %>
 </li>

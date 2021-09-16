@@ -26,7 +26,9 @@ class FriendshipsController < ApplicationController
       @pending = current_user.pending_friends
     end
   
-    def index; end
+    def index
+      @friendships=Friendship.all
+     end
   
     private
   
