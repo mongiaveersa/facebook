@@ -52,6 +52,11 @@ class User < ApplicationRecord
            foreign_key: :user_id, class_name: 'Friendship', inverse_of: 'user'
   has_many :sent_friends, through: :sent_requests, source: :friend
 
+
+  # messages 
+  has_many :messages
+  has_many :conversations, foreign_key: :sender_id
+
   def liked?(post_id)
     likes_given.where(post_id: post_id).any?
   end

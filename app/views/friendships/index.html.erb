@@ -1,8 +1,11 @@
-  <% @friendships.each do |fr| %>
+
 <ol>
-  
-    <li> <% user=User.find_by_id(fr.friend_id) %>
-        <%= link_to user.username, user %> </li>
+    <% @friendships.each do |fr| %>
+    <li> 
+        <% user=User.find_by_id(fr.friend_id) %>
+        <% if user.id!= current_user %>
+        <%= link_to user.username, user  %> </li>
+        <% end %>
+        <% end %>
 </ol>
 
-<% end %>

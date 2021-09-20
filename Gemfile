@@ -28,7 +28,9 @@ gem 'gravatar_image_tag'
 gem 'image_processing'
 gem 'rmagick'
 gem 'gravtastic'
-
+gem 'activeadmin'
+gem 'uglifier', '>= 1.3.0'
+gem 'jquery-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
