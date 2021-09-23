@@ -1,0 +1,208 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ 
+
+ 
+ body {
+   background-color: rgb(230, 230, 230);
+   font-family: 'Montserrat', sans-serif;
+ }
+ 
+
+ 
+ .active {
+   font-weight: bold;
+   border-bottom: 4px solid #777777;
+ }
+ 
+ .alert {
+   margin-bottom: 0;
+ }
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ .posts {
+   list-style: none;
+   padding: 0;
+ }
+ 
+ .post, .next_page {
+   width: 662px;
+ }
+ 
+ .post {
+   border-radius: 5px;
+   border: 1px solid rgb(220, 220, 220);
+   background-color: white;
+   margin: 10px 0;
+   padding: 10px;
+   .post-photo { 
+     margin: 5px 0;
+   }
+ }
+ 
+ .comments {
+   list-style: none;
+   margin-left: 15px;
+   margin-top: 10px;
+   padding-left: 0;
+   size: 20px;
+ }
+ 
+ .comment {
+   min-height: 54px;
+ }
+ 
+ .comment-avatar {
+   float: left;
+   border-radius: 32px;
+   overflow: hidden;
+ }
+ 
+ .comment-body {
+   background-color: rgb(240, 240, 240);
+   border-radius: 10px;
+   padding: 6px;
+   min-height: 32px;
+   word-wrap: break-word;
+ }
+ 
+ .comment-wrapper {
+   padding: 0;
+   min-height: 32px;
+   word-wrap: break-word;
+   margin: 5px 0 5px 40px;
+ }
+ 
+ .comment-form {
+   border-radius: 10px;
+   min-height: 32px;
+   input[type=text] {
+     border-radius: 10px;
+   }
+ }
+ 
+ .comment-interactions {
+   margin: 2px 5px 8px;
+   min-height: 20px;
+   .comment-btn-like {
+     font-size: 12px;
+   }
+ }
+ 
+ .comment-timestamp {
+   float: right;
+   color: #657786;
+ }
+ 
+ .comment-btn {
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+ }
+ 
+ .post-text-area {
+   resize: vertical;
+   min-height: 100px !important;
+ }
+ 
+ .advanced-actions {
+   float: right;
+   top: 0;
+   position:relative;
+ }
+ 
+ .post-interactions {
+   margin: 2px 0;
+   .post-btn-like {
+     padding: 2px 5px;
+     font-size: 13px
+   }
+ }
+ 
+ .post-user-link {
+   color: #657786;
+ }
+ 
+ .timestamp {
+   color: #657786;
+   &:before {
+     content: "\00b7";
+   }
+ }
+ 
+ .post-content {
+   display: block;
+   min-height: 40px;
+   word-wrap: break-word;
+   margin-left: 60px;
+   .post-actions {
+     display: block;
+   }
+ }
+
+   
+ .count {
+   background-color: blue;
+   color: #fff;
+   min-width: 20px;
+   border-radius: 12px;
+   display: inline-block;
+   text-align: center;
+   flex: auto;
+ }
+
+ 
+ .messages-list {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+.message-sent {
+  position: relative;
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+  margin: 5px 20px;
+  padding: 10px;
+  float: right;
+}
+
+
+.message-received {
+  background-color: #F1F0F0;
+  border-color: #EEEEEE;
+  margin: 5px 20px;
+  padding: 10px;
+  float: left;
+}
+
+ul {
+  padding-left: 0px;
+  list-style: none;
+}
+
+.icon{
+  size: 20px;
+}

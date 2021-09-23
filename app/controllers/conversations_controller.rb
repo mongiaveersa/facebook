@@ -1,34 +1,24 @@
 class ConversationsController < ApplicationController
-   respond_to :html, :js
-
   def create
-
     @conversation = Conversation.get(current_user.id, params[:user_id])
     
     add_to_conversations unless conversated?
-    debugger
 
     respond_to do |format|
-      format.html {}
-      format.js {render layout: false}
+      format.js
     end
   end
-
   def close
     @conversation = Conversation.find(params[:id])
-
     session[:conversations].delete(@conversation.id)
-
     respond_to do |format|
-      format.html {}
-      format.js {render layout: false}
+      format.js
     end
   end
 
-
+  private
 
   def add_to_conversations
-
     session[:conversations] ||= []
     session[:conversations] << @conversation.id
   end
@@ -36,7 +26,4 @@ class ConversationsController < ApplicationController
   def conversated?
     session[:conversations].include?(@conversation.id)
   end
-
-
 end
-

@@ -15,10 +15,11 @@ Rails.application.routes.draw do
   resources :likes
 
   resources :friendships
-  resources :conversations, only: [:create, :show]  do
+  resources :conversations, only: [:create] do
     member do
       post :close
     end
+    resources :messages, only: [:create]
   end
   get :chat, to: "home#index"
   resources :messages, only: [:create]

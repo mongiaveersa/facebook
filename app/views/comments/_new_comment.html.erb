@@ -3,7 +3,7 @@
     <%= f.text_area :content, placeholder: "Write a comment...",
                               class: "new-comment" %>
     <%= f.hidden_field :post_id, value: post.id %>
-    <div class="button">
+    <div>
     <%= f.button username: "comment-button" do %>
       <%= render 'comment_icon' %>
     <% end %>

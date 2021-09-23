@@ -12,10 +12,13 @@ has_many :messages, dependent: :destroy
   end
 
   def self.get(sender_id, recipient_id)
-    conversation = between(sender_id, recipient_id).first
-    return conversation if conversation.present?
-
-    create(sender_id: sender_id, recipient_id: recipient_id)
+    conversation = Conversation.between(sender_id, recipient_id).first
+    if conversation.present?
+      return conversation 
+    else
+    c=Conversation.create(sender_id: sender_id, recipient_id: recipient_id)
+    c.save
+    end
   end
 
   def opposed_user(user)
