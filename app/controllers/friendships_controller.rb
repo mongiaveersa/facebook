@@ -7,6 +7,8 @@ class FriendshipsController < ApplicationController
       return unless friendship.save
   
       flash[:success] = 'Friend request sent'
+      # Change the timing to your own accord to check when we have to send the notification mail 
+      RequestmailJob.set(wait: 5.second).perform_later(current_user,User.find_by(id: friendship_params[:friend_id]))
       redirect_to request.referer || root_path
     end
   

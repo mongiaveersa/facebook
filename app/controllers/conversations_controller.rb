@@ -7,6 +7,7 @@ class ConversationsController < ApplicationController
     respond_to do |format|
       format.js
     end
+  
   end
   def close
     @conversation = Conversation.find(params[:id])
