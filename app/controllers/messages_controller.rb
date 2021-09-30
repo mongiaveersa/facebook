@@ -6,6 +6,8 @@ class MessagesController < ApplicationController
     respond_to do |format|
       format.js
     end
+
+    redirect_to conversations_path
   end
 
   private

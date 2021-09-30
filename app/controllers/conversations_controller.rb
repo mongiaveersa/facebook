@@ -7,6 +7,7 @@ class ConversationsController < ApplicationController
     respond_to do |format|
       format.js
     end
+    
   
   end
   def close
@@ -14,7 +15,9 @@ class ConversationsController < ApplicationController
     session[:conversations].delete(@conversation.id)
     respond_to do |format|
       format.js
+      
     end
+    
   end
 
   private
@@ -22,6 +25,7 @@ class ConversationsController < ApplicationController
   def add_to_conversations
     session[:conversations] ||= []
     session[:conversations] << @conversation.id
+    
   end
 
   def conversated?
